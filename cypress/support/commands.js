@@ -1,6 +1,7 @@
 const auth = require('../services/auth.json')
 let idList;
 let cardId;
+let listID;
 
 Cypress.Commands.add('CriarBoard', () => {
     cy.request({
@@ -31,6 +32,24 @@ Cypress.Commands.add('DeletarBoard', () => {
         }
     }).then((response) => {
         expect(response.status).to.eq(200)
+    })
+})
+
+Cypress.Commands.add('CriarLista', () => {
+    cy.request({
+        method: 'POST',
+        url: '/lists/',
+        failOnStatusCode: false,
+        qs: {
+            "name": `Lista 123`,
+            "idBoard": idList,
+            "key": auth.apiKey,
+            "token": auth.authKey
+        }
+    }).then((response) => {
+        expect(response.status).to.eq(200)
+        listID = response.body.id;
+        cy.log('List ID:', listID);
     })
 })
 
