@@ -10,4 +10,5 @@ Roteiro do Desafio Tecnico de QA TINNOVA:
 
 
     Mapa mental:
-    [API KEY + API TOKEN.pdf](https://github.com/user-attachments/files/16431511/API.KEY.%2B.API.TOKEN.pdf)
+    [API KEY + API TOKEN.pdf](https://github.com/user-attachments/files/16431526/API.KEY.%2B.API.TOKEN.pdf)
+
